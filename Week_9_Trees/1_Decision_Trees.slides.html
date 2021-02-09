@@ -15067,10 +15067,10 @@ $$
 
 </div>
 
-</div>
+</div></div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Why-not-Classification-Error">Why not Classification Error<a class="anchor-link" href="#Why-not-Classification-Error">&#182;</a></h3><p><em>Classification Error</em> is rarely used for infomration gain in practice (its not even an option in <code>scikit-learn</code>).</p>
+<h3 id="Why-not-Classification-Error?">Why not Classification Error?<a class="anchor-link" href="#Why-not-Classification-Error?">&#182;</a></h3><p><em>Classification Error</em> is rarely used for information gain in practice.</p>
 <p>This is because it can mean that tree growth gets stuck and error doesnt improve, this is not the case for a concave function such as entropy or gini.</p>
 
 </div>
@@ -15080,12 +15080,13 @@ $$
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><strong>Notes</strong></p>
 <ul>
+<li>Classification Error its not even an option in <code>scikit-learn</code></li>
 <li>Another example of this is given in exersise x</li>
 </ul>
 
 </div>
 </div>
-</aside><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+</aside><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
 <div class="jp-Cell-outputWrapper">
 
@@ -15107,6 +15108,13 @@ width=550
 </div>
 
 </div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Feature-Importance">Feature Importance<a class="anchor-link" href="#Feature-Importance">&#182;</a></h2>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput ">
 
 </div></div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
@@ -15347,14 +15355,6 @@ memory usage: 133.5 KB
 <div class="jp-Cell-outputWrapper">
 
 <div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Number of nodes in the last tree is: 1 with ccp_alpha: 0.25163892346166594
-</pre>
-</div>
-</div>
 
 <div class="jp-OutputArea-child">
 
