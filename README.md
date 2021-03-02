@@ -17,8 +17,10 @@ There are also folders for "Data" and "Images", as well as saved "Models".
 ## Setup
 
 If you want to run the .ipynb on the **cloud**, the easiest method is to click the "Launch Binder" button at the top of this readme.
+- It make take a little bit to copy and install everything when you first get it set up, so its a good time to make a cup of tea.
+- Once working the scripts are relatively quick to run.
 
-If you want to run them locally, then the way I set them up is the following (other methods exist):
+If you want to run them **locally**, then the way I set them up is the following (other methods exist):
 
 1. Download Anaconda (https://www.anaconda.com/products/individual)
 2. Using the "Anaconda Navigator", click on the "Environments" tab, then "Create" to make a new Python 3.8 environment (I called mine "mlp")
