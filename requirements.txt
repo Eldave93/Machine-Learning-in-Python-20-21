@@ -1,4 +1,3 @@
-name: mlp_new
 channels:
   - conda-forge
   - defaults
