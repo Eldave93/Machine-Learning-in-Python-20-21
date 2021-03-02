@@ -30,11 +30,18 @@ If you want to run them **locally**, then the way I set them up is the following
 
 ## Viewing Slides
 
-I use "Rise" slideshows to present the notebooks. 
+I use "Rise" slideshows to present the .ipynb Juypter Notebooks. 
 
 - If installed, slideshow mode can be toggled on using the barchart icon on the top toolbar in Jupyter, and off again using the x in the top left.
 - You may need to zoom in and out to get some of the slides to be displayed fully, but if using Chrome then you can just toggle `CTRL +` and `CTRL -`
 - To get the "Toggle code" button to work, you need to go into "File", and click "Trust Notebook".
+
+## Viewing Exercises
+
+If you want to view the Exercises.ipynb on the **cloud**, you can just follow the links below:
+- [SVM Exercises](http://htmlpreview.github.io/?https://github.com/Eldave93/Machine-Learning-in-Python-20-21/blob/master/Week_08_SVM/SVM_Exercises.html)
+
+If you want to view them **locally**, then once you have them on your local machine (git pull or download file individually), you can open them using any web browser (I use chrome).
 
 ## Additional Notes
 
