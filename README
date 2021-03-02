@@ -1,6 +1,6 @@
 ML in Python teaching material (20/21)
 
-__File Explanation__
+**File Explanation**
 
 In each of the folders you will find the following types of files:
 
@@ -15,6 +15,6 @@ In each of the folders you will find the following types of files:
 
 There are also folders for "Images" used in the presentation, as well as saved "Models".
 
-__Notes__
+**Notes**
 
 - https://www.markroepke.me/posts/2019/06/05/tips-for-slideshows-in-jupyter.html
