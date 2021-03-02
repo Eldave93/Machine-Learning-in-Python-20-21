@@ -13,6 +13,7 @@ In each of the folders you will find the following types of files:
 There are also folders for "Images" used in the presentation, as well as saved "Models".
 
 **Setup**
+
 If you want to see the slides as presented, or run the .ipynb, the easiest method is to follow the links below:
 - [links]
 
