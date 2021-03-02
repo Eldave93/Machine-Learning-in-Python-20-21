@@ -62,7 +62,7 @@ pyparsing==2.4.7
 pytest==6.2.2
 python-dateutil==2.8.1
 pytz==2021.1
-pywin32==300
+#pywin32==300
 #pywinpty @ file:///D:/bld/pywinpty_1602377663724/work
 #pyzmq @ file:///D:/bld/pyzmq_1614611907285/work
 rise==5.7.1
