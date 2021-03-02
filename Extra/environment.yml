@@ -101,7 +101,7 @@ dependencies:
     - pluggy==0.13.1
     - py==1.10.0
     - pytest==6.2.2
-    - python-graphviz==0.16
+    - graphviz==0.16
     - pytz==2021.1
     - rise==5.7.1
     - scikit-learn==0.24.1
