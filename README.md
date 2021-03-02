@@ -19,7 +19,7 @@ If you want to view the Exercises.ipynb on the **cloud**, you can just follow th
 
 __SVM__
 
-1. [Maximal Margin Classifiers](http://htmlpreview.github.io/?https://github.com/Eldave93/Machine-Learning-in-Python-20-21/blob/master/Week_08_SVM/1_Maximal_Margin_Classifiers.html)
+1. <a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21//Week_08_SVM/1_Maximal_Margin_Classifiers.html" title="Maximal Margin Classifiers">Maximal Margin Classifiers</a>
 2. [Support Vector Machines](http://htmlpreview.github.io/?https://github.com/Eldave93/Machine-Learning-in-Python-20-21/blob/master/Week_08_SVM/2_Support_Vector_Machines.html)
 3. [Applications](http://htmlpreview.github.io/?https://github.com/Eldave93/Machine-Learning-in-Python-20-21/blob/master/Week_08_SVM/3_Applications.html)
 
