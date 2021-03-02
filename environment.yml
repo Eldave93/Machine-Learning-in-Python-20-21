@@ -20,7 +20,7 @@ dependencies:
 #  - importlib-metadata=3.7.0=py38haa244fe_0
 #  - importlib_metadata=3.7.0=hd8ed1ab_0
 #  - ipykernel=5.5.0=py38hc5df569_1
-  - ipython=7.21.0=py38hc5df569_0
+#  - ipython=7.21.0=py38hc5df569_0
   - ipython_genutils=0.2.0=py_1
 #  - jedi=0.18.0=py38haa244fe_2
   - jinja2=2.11.3=pyh44b312d_0
@@ -57,7 +57,7 @@ dependencies:
 #  - pyrsistent=0.17.3=py38h294d835_2
 #  - python=3.8.8=h7840368_0_cpython
   - python-dateutil=2.8.1=py_0
-  - python_abi=3.8=1_cp38
+#  - python_abi=3.8=1_cp38
 #  - pywin32=300=py38h294d835_0
 #  - pywinpty=0.5.7=py38h32f6830_1
 #  - pyzmq=22.0.3=py38h09162b1_1
