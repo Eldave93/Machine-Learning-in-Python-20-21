@@ -21,7 +21,7 @@ __SVM__
 
 1. <a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21//Week_08_SVM/1_Maximal_Margin_Classifiers.html" title="Maximal Margin Classifiers">Maximal Margin Classifiers</a>
 2. <a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21//Week_08_SVM/2_Support_Vector_Machines.html" title="Support Vector Machines">Support Vector Machines</a>
-3. <a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21//Week_08_SVM/3_Applications.html" title="Applications">Applications</a>[Applications]
+3. <a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21//Week_08_SVM/3_Applications.html" title="Applications">Applications</a>
 
 __Trees__
 
@@ -40,7 +40,7 @@ If you want to view them **locally**, then once you have them on your local mach
 ## Viewing Exercises
 
 If you want to view the Exercises.ipynb on the **cloud**, you can just follow the links below:
-- <a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21//Week_08_SVM/SVM_Exercises.html" title="Applications">SVM Exercises</a>[SVM Exercises]
+- <a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21//Week_08_SVM/SVM_Exercises.html" title="SVM Exercises">SVM Exercises</a>
 
 If you want to view them **locally**, then follow the same instructions as above for the Notes.
 
