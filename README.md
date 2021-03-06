@@ -4,7 +4,7 @@
 Welcome to materials for Weeks 8-11 of Machine Learning in Python (MATH11205), a Postgraduate Course in the School of Mathematics at the University of Edinburgh.
 
 ## Viewing Notes
-If you want to view the Exercises **online**, you can just follow the links below:
+If you want to view the Notes **online**, you can just follow the links below:
 
 __SVM__
 
