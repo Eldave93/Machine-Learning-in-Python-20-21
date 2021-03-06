@@ -26,12 +26,16 @@ __Ethics__
 
 If you want to download and view them **offline**, you can right click on the links above, and click "save link as". These are .html files that you can open using any web browser (I use chrome).
 
+- Code can be viewed or hidden using the "Toggle Code" button at the top of the notebook.
+
 ## Viewing Exercises
 
 If you want to view the Exercises **online**, you can just follow the links below:
 - <a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21//Week_08_SVM/SVM_Exercises.html" title="SVM Exercises">SVM Exercises</a>
 
 If you want to view them **offline**, then follow the same instructions as above for the Notes.
+
+- Exercise answers can be viewed or hidden by clicking "Click here for answer" under each question.
 
 ## Running the Juypter Notebooks 
 
@@ -60,17 +64,16 @@ I use "Rise" slideshows to present the .ipynb Juypter Notebooks.
 You can also access the material directly though GitHub. In each of the folders you will find the following types of files:
 
 - .ipynb: The Juypter Notebook used to create the slides and notes.
-- .html: The html version of the notes.
-	- Code can be viewed or hidden.
+- .html: The html version of the notes and exercises.
 - .slides.html: A html version of the slides.
-	- Has an issue with figures not being displayed properly.
-    - Its better to run using "Rise" slideshow in Jupyter.
 
 There are also folders for "Data" and "Images", as well as saved "Models".
 
 ## Additional Notes
 
-- .html was chosen over .pdf as if found .pdf conversions had a number of errors:
+- .html was chosen over .pdf as I found .pdf conversions had a number of errors:
 	- Has an issue with numbering titles.
 	- Doesn't display tables as well as the html version.
 	- Cannot use \begin{align} in markdown math.
+- .slides.html has an issue with figures not being displayed properly.
+	- Its better to run using "Rise" slideshow in Jupyter.
