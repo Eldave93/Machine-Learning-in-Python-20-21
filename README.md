@@ -60,13 +60,15 @@ I use "Rise" slideshows to present the .ipynb Juypter Notebooks.
 
 ## GitHub File Structure
 
-You can also access the material directly though GitHub. In each of the folders you will find the following types of files:
+You can also access the material directly though GitHub. In each of the weekly content folders you will find the following types of files:
 
 - .ipynb: The Juypter Notebook used to create the slides and notes.
 - .html: The html version of the notes and exercises.
 - .slides.html: A html version of the slides.
 
-There are also folders for "Data" and "Images", as well as saved "Models".
+For each week, there are also subfolders for "Images" and saved "Models".
+
+As well as the weekly folders, there are folders for the "Data" used in the lectures and an "Extra" folder, containing additional material (most are currently unfinished).
 
 ## Additional Notes
 
