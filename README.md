@@ -1,6 +1,8 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Eldave93/Machine-Learning-in-Python-20-21/HEAD)
 # Machine Learning in Python (Weeks 8-11)
 
+Welcome to materials for Weeks 8-11 of Machine Learning in Python (MATH11205), a Postgraduate Course in the School of Mathematics at the University of Edinburgh.
+
 ## Viewing Notes
 If you want to view the Exercises.ipynb on the **cloud**, you can just follow the links below:
 
