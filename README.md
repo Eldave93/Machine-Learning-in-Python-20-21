@@ -4,7 +4,7 @@
 Welcome to materials for Weeks 8-11 of Machine Learning in Python (MATH11205), a Postgraduate Course in the School of Mathematics at the University of Edinburgh.
 
 ## Viewing Notes
-If you want to view the Exercises.ipynb on the **cloud**, you can just follow the links below:
+If you want to view the Exercises.ipynb **online**, you can just follow the links below:
 
 __SVM__
 
@@ -24,14 +24,14 @@ __Ethics__
 
 - Work in Progress
 
-If you want to download and view them **locally**, one way to do so is to right click on the links above, and click "save link as". These are .html files that you can open using any web browser (I use chrome). You do not need to have internet access to view them if downloaded on your computer.
+If you want to download and view them **offline**, one way to do so is to right click on the links above, and click "save link as". These are .html files that you can open using any web browser (I use chrome).
 
 ## Viewing Exercises
 
-If you want to view the Exercises.ipynb on the **cloud**, you can just follow the links below:
+If you want to view the Exercises.ipynb on the **online**, you can just follow the links below:
 - <a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21//Week_08_SVM/SVM_Exercises.html" title="SVM Exercises">SVM Exercises</a>
 
-If you want to view them **locally**, then follow the same instructions as above for the Notes.
+If you want to view them **offline**, then follow the same instructions as above for the Notes.
 
 ## Running the Juypter Notebooks 
 
