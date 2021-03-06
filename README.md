@@ -36,8 +36,7 @@ If you want to view them **offline**, then follow the same instructions as above
 
 - Exercise answers can be viewed or hidden by clicking "Click here for answer" under each question.
 
-## Running the Juypter Notebooks 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Eldave93/Machine-Learning-in-Python-20-21/HEAD)
+## Running the Juypter Notebooks [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Eldave93/Machine-Learning-in-Python-20-21/HEAD)
 
 If you want to run the Juypter Notebooks on the **cloud**, the easiest method is to click the "Launch Binder" button above.
 - It make take a little bit to copy and install everything when you first get it set up, so its a good time to make a cup of tea.
