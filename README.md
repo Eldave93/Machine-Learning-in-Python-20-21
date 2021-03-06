@@ -24,7 +24,7 @@ __Ethics__
 
 - Work in Progress
 
-If you want to download and view them **locally**, one way to do so is to right click on the links above, and click "save link as". These are .html files that you can open using any web browser (I use chrome).
+If you want to download and view them **locally**, one way to do so is to right click on the links above, and click "save link as". These are .html files that you can open using any web browser (I use chrome). You do not need to have internet access to view them if downloaded on your computer.
 
 ## Viewing Exercises
 
@@ -35,9 +35,9 @@ If you want to view them **locally**, then follow the same instructions as above
 
 ## Running the Juypter Notebooks 
 
-If you want to run the .ipynb on the **cloud**, the easiest method is to click the "Launch Binder" button at the top of this readme.
+If you want to run the .ipynb on the **cloud**, the easiest method is to click the "Launch Binder" button at the top of this page.
 - It make take a little bit to copy and install everything when you first get it set up, so its a good time to make a cup of tea.
-- Once working the scripts are relatively quick to run.
+- Once working, the scripts are relatively quick to run.
 
 If you want to run them **locally**, then the way I set them up is the following (other methods exist):
 
@@ -45,7 +45,7 @@ If you want to run them **locally**, then the way I set them up is the following
 2. Using the "Anaconda Navigator", click on the "Environments" tab, then "Create" to make a new Python 3.8 environment (I called mine "mlp")
 3. Click on the "Home" tab, on the top dropdown menu ("Applications on") select your new environment.
 4. Install "Jupyter Notebook" in your environment and click "Launch".
-5. Locate to where the course materials are (maybe you used git to pull the repository from GitHub), and run the "package_install" notebook from the "Extra" folder. 
+5. Locate to where the course materials are (You could clone the repository from GitHub), and run the "package_install" notebook from the "Extra" folder. 
 
 ### Viewing Slides
 
