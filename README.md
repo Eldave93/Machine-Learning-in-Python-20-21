@@ -24,7 +24,7 @@ __Ethics__
 
 - Work in Progress
 
-If you want to view them **locally**, then once you have them on your local machine (git pull or download file individually), you can open them using any web browser (I use chrome).
+If you want to download and view them **locally**, one way to do so is to right click on the links above, and click "save link as". These are .html files that you can open using any web browser (I use chrome).
 
 ## Viewing Exercises
 
@@ -33,17 +33,7 @@ If you want to view the Exercises.ipynb on the **cloud**, you can just follow th
 
 If you want to view them **locally**, then follow the same instructions as above for the Notes.
 
-## Viewing Slides
-
-I use "Rise" slideshows to present the .ipynb Juypter Notebooks. 
-
-- If installed, slideshow mode can be toggled on using the barchart icon on the top toolbar in Jupyter, and off again using the x in the top left.
-- You may need to zoom in and out to get some of the slides to be displayed fully, but if using Chrome then you can just toggle `CTRL +` and `CTRL -`
-- To get the "Toggle code" button to work, you need to go into "File", and click "Trust Notebook".
-
-I have also provided ".slides.html" files but they tend to cut off the figures a bit (its a work in progress).
-
-## Juypter Setup
+## Running the Juypter Notebooks 
 
 If you want to run the .ipynb on the **cloud**, the easiest method is to click the "Launch Binder" button at the top of this readme.
 - It make take a little bit to copy and install everything when you first get it set up, so its a good time to make a cup of tea.
@@ -57,9 +47,19 @@ If you want to run them **locally**, then the way I set them up is the following
 4. Install "Jupyter Notebook" in your environment and click "Launch".
 5. Locate to where the course materials are (maybe you used git to pull the repository from GitHub), and run the "package_install" notebook from the "Extra" folder. 
 
-## File Structure
+### Viewing Slides
 
-In each of the folders you will find the following types of files:
+I use "Rise" slideshows to present the .ipynb Juypter Notebooks. 
+
+- If installed, slideshow mode can be toggled on using the barchart icon on the top toolbar in Jupyter, and off again using the x in the top left.
+- You may need to zoom in and out to get some of the slides to be displayed fully, but if using Chrome then you can just toggle `CTRL +` and `CTRL -`
+- To get the "Toggle code" button to work, you need to go into "File", and click "Trust Notebook".
+
+I have also provided ".slides.html" files but they tend to cut off the figures a bit (its a work in progress).
+
+## GitHub File Structure
+
+You can also access the material directly though GitHub. In each of the folders you will find the following types of files:
 
 - .ipynb: The Juypter Notebook used to create the slides and notes.
 - .html: The html version of the notes.
