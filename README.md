@@ -4,7 +4,7 @@
 Welcome to materials for Weeks 8-11 of Machine Learning in Python (MATH11205), a Postgraduate Course in the School of Mathematics at the University of Edinburgh.
 
 ## Viewing Notes
-If you want to view the Exercises.ipynb **online**, you can just follow the links below:
+If you want to view the Exercises **online**, you can just follow the links below:
 
 __SVM__
 
@@ -24,18 +24,18 @@ __Ethics__
 
 - Work in Progress
 
-If you want to download and view them **offline**, one way to do so is to right click on the links above, and click "save link as". These are .html files that you can open using any web browser (I use chrome).
+If you want to download and view them **offline**, you can right click on the links above, and click "save link as". These are .html files that you can open using any web browser (I use chrome).
 
 ## Viewing Exercises
 
-If you want to view the Exercises.ipynb on the **online**, you can just follow the links below:
+If you want to view the Exercises **online**, you can just follow the links below:
 - <a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21//Week_08_SVM/SVM_Exercises.html" title="SVM Exercises">SVM Exercises</a>
 
 If you want to view them **offline**, then follow the same instructions as above for the Notes.
 
 ## Running the Juypter Notebooks 
 
-If you want to run the .ipynb on the **cloud**, the easiest method is to click the "Launch Binder" button at the top of this page.
+If you want to run the Juypter Notebooks on the **cloud**, the easiest method is to click the "Launch Binder" button at the top of this page.
 - It make take a little bit to copy and install everything when you first get it set up, so its a good time to make a cup of tea.
 - Once working, the scripts are relatively quick to run.
 
@@ -51,11 +51,9 @@ If you want to run them **locally**, then the way I set them up is the following
 
 I use "Rise" slideshows to present the .ipynb Juypter Notebooks. 
 
-- If installed, slideshow mode can be toggled on using the barchart icon on the top toolbar in Jupyter, and off again using the x in the top left.
+- If "Rise" is installed, slideshow mode can be toggled on using the barchart icon on the top toolbar in Jupyter, and off again using the x in the top left.
 - You may need to zoom in and out to get some of the slides to be displayed fully, but if using Chrome then you can just toggle `CTRL +` and `CTRL -`
 - To get the "Toggle code" button to work, you need to go into "File", and click "Trust Notebook".
-
-I have also provided ".slides.html" files but they tend to cut off the figures a bit (its a work in progress).
 
 ## GitHub File Structure
 
