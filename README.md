@@ -23,9 +23,19 @@ __Ethics__
 
 - Work in Progress
 
-If you want to download and view them **offline**, you can right click on the links above, and click "save link as". These are .html files that you can open using any web browser (I use chrome).
+If you want to download and view them **offline**, you can right click on the links above, and click "save link as". 
 
+### HTML
+- .html files can be opened using any web browser (I use chrome).
 - Code can be viewed or hidden using the "Toggle Code" button at the top of the notebook.
+
+### PDF
+- They do not display code.
+- They are useful for adding your own notes to.
+- .pdf conversions can have some issues:
+	- Numbering titles.
+	- Doesn't display tables as well as the html version.
+	- Some issues with \begin{align} in markdown math.
 
 ## Viewing Exercises
 
