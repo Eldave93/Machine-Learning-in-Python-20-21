@@ -2,7 +2,7 @@
 
 Welcome to materials for Weeks 8-11 of Machine Learning in Python (MATH11205), a Postgraduate Course in the School of Mathematics at the University of Edinburgh.
 
-## Viewing Notes
+## Viewing Notes and Exercises
 If you want to view the Notes **online**, you can just follow the links below:
 
 __SVM__
@@ -10,6 +10,8 @@ __SVM__
 1. Maximal Margin Classifiers [<a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21//Week_08_SVM/1_Maximal_Margin_Classifiers.html" title="HTML">HTML</a>, <a href="https://github.com/Eldave93/Machine-Learning-in-Python-20-21/blob/master/Week_08_SVM/1_Maximal_Margin_Classifiers_no_code.pdf" title="PDF">PDF</a>]
 2. Support Vector Machines [<a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21//Week_08_SVM/2_Support_Vector_Machines.html" title="HTML">HTML</a>, <a href="https://github.com/Eldave93/Machine-Learning-in-Python-20-21/blob/master/Week_08_SVM/2_Support_Vector_Machines_no_code.pdf" title="PDF">PDF</a>]
 3. Applications [<a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21//Week_08_SVM/3_Applications.html" title="HTML">HTML</a>, <a href="https://github.com/Eldave93/Machine-Learning-in-Python-20-21/blob/master/Week_08_SVM/3_Applications_no_code.pdf" title="PDF">PDF</a>]
+
+Exercises [<a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21//Week_08_SVM/SVM_Exercises.html" title="HTML">HTML</a>, <a href="https://github.com/Eldave93/Machine-Learning-in-Python-20-21/blob/master/Week_08_SVM/SVM_Exercises.pdf" title="PDF1">PDF1</a>, <a href="https://github.com/Eldave93/Machine-Learning-in-Python-20-21/blob/master/Week_08_SVM/SVM_Exercises_Answers.pdf" title="PDF2">PDF2</a>]
 
 __Trees__
 
@@ -27,22 +29,15 @@ If you want to download and view them **offline**, you can right click on the li
 
 ### HTML
 - .html files can be opened using any web browser (I use chrome).
-- Code can be viewed or hidden using the "Toggle Code" button at the top of the notebook.
+- For the notes, code can be viewed or hidden using the "Toggle Code" button at the top of the notebook.
+- For the exercises, answers can be viewed or hidden by clicking "Click here for answer" under each question.
 
 ### PDF
-- They do not display code (for ease of reading more than a requirement).
+- Notes do not display code for ease of reading.
+- `PDF1` have just the questions, and `PDF2` are the questions and answers.
 - They are useful for adding your own notes to.
 - The best method I've found so far is to manually use https://pdfcrowd.com/ for converting the .html files.
 	- They have a Python API... but it costs money so I do it manually.
-
-## Viewing Exercises
-
-If you want to view the Exercises **online**, you can just follow the links below:
-- <a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21//Week_08_SVM/SVM_Exercises.html" title="SVM Exercises">SVM Exercises</a>
-
-If you want to view them **offline**, then follow the same instructions as above for the Notes.
-
-- Exercise answers can be viewed or hidden by clicking "Click here for answer" under each question.
 
 ## Running the Juypter Notebooks [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Eldave93/Machine-Learning-in-Python-20-21/HEAD)
 
