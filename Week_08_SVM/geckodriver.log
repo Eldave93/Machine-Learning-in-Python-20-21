@@ -1,0 +1,29 @@
+1615219638767	geckodriver	INFO	Listening on 127.0.0.1:55531
+1615219641874	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\delliot2\\AppData\\Local\\Temp\\rust_mozprofilehSLUou"
+*** You are running in headless mode.
+1615219705167	geckodriver	INFO	Listening on 127.0.0.1:55648
+1615219708199	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\delliot2\\AppData\\Local\\Temp\\rust_mozprofileGSAwHT"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615219710130	Marionette	INFO	Listening on port 55657
+1615219710266	Marionette	WARN	TLS certificate errors will be ignored for this session
+1615219739070	geckodriver	INFO	Listening on 127.0.0.1:55690
+1615219742109	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\delliot2\\AppData\\Local\\Temp\\rust_mozprofileaUvdO7"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615219743724	Marionette	INFO	Listening on port 55701
+1615219744202	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1:55731
+1615219755741	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\delliot2\\AppData\\Local\\Temp\\rust_mozprofilegwGX6K"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615219757428	Marionette	INFO	Listening on port 55740
+1615219757781	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1:55779
+1615219791039	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\delliot2\\AppData\\Local\\Temp\\rust_mozprofileA8LZb5"
+*** You are running in headless mode.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1615219792709	Marionette	INFO	Listening on port 55789
+1615219793097	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE

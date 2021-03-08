@@ -1,0 +1,1088 @@
+\documentclass[11pt]{article}
+
+    \usepackage[breakable]{tcolorbox}
+    \usepackage{parskip} % Stop auto-indenting (to mimic markdown behaviour)
+    
+    \usepackage{iftex}
+    \ifPDFTeX
+    	\usepackage[T1]{fontenc}
+    	\usepackage{mathpazo}
+    \else
+    	\usepackage{fontspec}
+    \fi
+
+    % Basic figure setup, for now with no caption control since it's done
+    % automatically by Pandoc (which extracts ![](path) syntax from Markdown).
+    \usepackage{graphicx}
+    % Maintain compatibility with old templates. Remove in nbconvert 6.0
+    \let\Oldincludegraphics\includegraphics
+    % Ensure that by default, figures have no caption (until we provide a
+    % proper Figure object with a Caption API and a way to capture that
+    % in the conversion process - todo).
+    \usepackage{caption}
+    \DeclareCaptionFormat{nocaption}{}
+    \captionsetup{format=nocaption,aboveskip=0pt,belowskip=0pt}
+
+    \usepackage{float}
+    \floatplacement{figure}{H} % forces figures to be placed at the correct location
+    \usepackage{xcolor} % Allow colors to be defined
+    \usepackage{enumerate} % Needed for markdown enumerations to work
+    \usepackage{geometry} % Used to adjust the document margins
+    \usepackage{amsmath} % Equations
+    \usepackage{amssymb} % Equations
+    \usepackage{textcomp} % defines textquotesingle
+    % Hack from http://tex.stackexchange.com/a/47451/13684:
+    \AtBeginDocument{%
+        \def\PYZsq{\textquotesingle}% Upright quotes in Pygmentized code
+    }
+    \usepackage{upquote} % Upright quotes for verbatim code
+    \usepackage{eurosym} % defines \euro
+    \usepackage[mathletters]{ucs} % Extended unicode (utf-8) support
+    \usepackage{fancyvrb} % verbatim replacement that allows latex
+    \usepackage{grffile} % extends the file name processing of package graphics 
+                         % to support a larger range
+    \makeatletter % fix for old versions of grffile with XeLaTeX
+    \@ifpackagelater{grffile}{2019/11/01}
+    {
+      % Do nothing on new versions
+    }
+    {
+      \def\Gread@@xetex#1{%
+        \IfFileExists{"\Gin@base".bb}%
+        {\Gread@eps{\Gin@base.bb}}%
+        {\Gread@@xetex@aux#1}%
+      }
+    }
+    \makeatother
+    \usepackage[Export]{adjustbox} % Used to constrain images to a maximum size
+    \adjustboxset{max size={0.9\linewidth}{0.9\paperheight}}
+
+    % The hyperref package gives us a pdf with properly built
+    % internal navigation ('pdf bookmarks' for the table of contents,
+    % internal cross-reference links, web links for URLs, etc.)
+    \usepackage{hyperref}
+    % The default LaTeX title has an obnoxious amount of whitespace. By default,
+    % titling removes some of it. It also provides customization options.
+    \usepackage{titling}
+    \usepackage{longtable} % longtable support required by pandoc >1.10
+    \usepackage{booktabs}  % table support for pandoc > 1.12.2
+    \usepackage[inline]{enumitem} % IRkernel/repr support (it uses the enumerate* environment)
+    \usepackage[normalem]{ulem} % ulem is needed to support strikethroughs (\sout)
+                                % normalem makes italics be italics, not underlines
+    \usepackage{mathrsfs}
+    
+
+    
+    % Colors for the hyperref package
+    \definecolor{urlcolor}{rgb}{0,.145,.698}
+    \definecolor{linkcolor}{rgb}{.71,0.21,0.01}
+    \definecolor{citecolor}{rgb}{.12,.54,.11}
+
+    % ANSI colors
+    \definecolor{ansi-black}{HTML}{3E424D}
+    \definecolor{ansi-black-intense}{HTML}{282C36}
+    \definecolor{ansi-red}{HTML}{E75C58}
+    \definecolor{ansi-red-intense}{HTML}{B22B31}
+    \definecolor{ansi-green}{HTML}{00A250}
+    \definecolor{ansi-green-intense}{HTML}{007427}
+    \definecolor{ansi-yellow}{HTML}{DDB62B}
+    \definecolor{ansi-yellow-intense}{HTML}{B27D12}
+    \definecolor{ansi-blue}{HTML}{208FFB}
+    \definecolor{ansi-blue-intense}{HTML}{0065CA}
+    \definecolor{ansi-magenta}{HTML}{D160C4}
+    \definecolor{ansi-magenta-intense}{HTML}{A03196}
+    \definecolor{ansi-cyan}{HTML}{60C6C8}
+    \definecolor{ansi-cyan-intense}{HTML}{258F8F}
+    \definecolor{ansi-white}{HTML}{C5C1B4}
+    \definecolor{ansi-white-intense}{HTML}{A1A6B2}
+    \definecolor{ansi-default-inverse-fg}{HTML}{FFFFFF}
+    \definecolor{ansi-default-inverse-bg}{HTML}{000000}
+
+    % common color for the border for error outputs.
+    \definecolor{outerrorbackground}{HTML}{FFDFDF}
+
+    % commands and environments needed by pandoc snippets
+    % extracted from the output of `pandoc -s`
+    \providecommand{\tightlist}{%
+      \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+    \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+    % Add ',fontsize=\small' for more characters per line
+    \newenvironment{Shaded}{}{}
+    \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+    \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+    \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+    \newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+    \newcommand{\RegionMarkerTok}[1]{{#1}}
+    \newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\NormalTok}[1]{{#1}}
+    
+    % Additional commands for more recent versions of Pandoc
+    \newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
+    \newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
+    \newcommand{\ImportTok}[1]{{#1}}
+    \newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
+    \newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
+    \newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
+    \newcommand{\BuiltInTok}[1]{{#1}}
+    \newcommand{\ExtensionTok}[1]{{#1}}
+    \newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
+    \newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
+    \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    
+    
+    % Define a nice break command that doesn't care if a line doesn't already
+    % exist.
+    \def\br{\hspace*{\fill} \\* }
+    % Math Jax compatibility definitions
+    \def\gt{>}
+    \def\lt{<}
+    \let\Oldtex\TeX
+    \let\Oldlatex\LaTeX
+    \renewcommand{\TeX}{\textrm{\Oldtex}}
+    \renewcommand{\LaTeX}{\textrm{\Oldlatex}}
+    % Document parameters
+    % Document title
+    \title{1\_Maximal\_Margin\_Classifiers}
+    
+    
+    
+    
+    
+% Pygments definitions
+\makeatletter
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@fm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sa\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@dl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@mb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ch\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cpf\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZhy{\char`\-}
+\def\PYZsq{\char`\'}
+\def\PYZdq{\char`\"}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\makeatother
+
+
+    % For linebreaks inside Verbatim environment from package fancyvrb. 
+    \makeatletter
+        \newbox\Wrappedcontinuationbox 
+        \newbox\Wrappedvisiblespacebox 
+        \newcommand*\Wrappedvisiblespace {\textcolor{red}{\textvisiblespace}} 
+        \newcommand*\Wrappedcontinuationsymbol {\textcolor{red}{\llap{\tiny$\m@th\hookrightarrow$}}} 
+        \newcommand*\Wrappedcontinuationindent {3ex } 
+        \newcommand*\Wrappedafterbreak {\kern\Wrappedcontinuationindent\copy\Wrappedcontinuationbox} 
+        % Take advantage of the already applied Pygments mark-up to insert 
+        % potential linebreaks for TeX processing. 
+        %        {, <, #, %, $, ' and ": go to next line. 
+        %        _, }, ^, &, >, - and ~: stay at end of broken line. 
+        % Use of \textquotesingle for straight quote. 
+        \newcommand*\Wrappedbreaksatspecials {% 
+            \def\PYGZus{\discretionary{\char`\_}{\Wrappedafterbreak}{\char`\_}}% 
+            \def\PYGZob{\discretionary{}{\Wrappedafterbreak\char`\{}{\char`\{}}% 
+            \def\PYGZcb{\discretionary{\char`\}}{\Wrappedafterbreak}{\char`\}}}% 
+            \def\PYGZca{\discretionary{\char`\^}{\Wrappedafterbreak}{\char`\^}}% 
+            \def\PYGZam{\discretionary{\char`\&}{\Wrappedafterbreak}{\char`\&}}% 
+            \def\PYGZlt{\discretionary{}{\Wrappedafterbreak\char`\<}{\char`\<}}% 
+            \def\PYGZgt{\discretionary{\char`\>}{\Wrappedafterbreak}{\char`\>}}% 
+            \def\PYGZsh{\discretionary{}{\Wrappedafterbreak\char`\#}{\char`\#}}% 
+            \def\PYGZpc{\discretionary{}{\Wrappedafterbreak\char`\%}{\char`\%}}% 
+            \def\PYGZdl{\discretionary{}{\Wrappedafterbreak\char`\$}{\char`\$}}% 
+            \def\PYGZhy{\discretionary{\char`\-}{\Wrappedafterbreak}{\char`\-}}% 
+            \def\PYGZsq{\discretionary{}{\Wrappedafterbreak\textquotesingle}{\textquotesingle}}% 
+            \def\PYGZdq{\discretionary{}{\Wrappedafterbreak\char`\"}{\char`\"}}% 
+            \def\PYGZti{\discretionary{\char`\~}{\Wrappedafterbreak}{\char`\~}}% 
+        } 
+        % Some characters . , ; ? ! / are not pygmentized. 
+        % This macro makes them "active" and they will insert potential linebreaks 
+        \newcommand*\Wrappedbreaksatpunct {% 
+            \lccode`\~`\.\lowercase{\def~}{\discretionary{\hbox{\char`\.}}{\Wrappedafterbreak}{\hbox{\char`\.}}}% 
+            \lccode`\~`\,\lowercase{\def~}{\discretionary{\hbox{\char`\,}}{\Wrappedafterbreak}{\hbox{\char`\,}}}% 
+            \lccode`\~`\;\lowercase{\def~}{\discretionary{\hbox{\char`\;}}{\Wrappedafterbreak}{\hbox{\char`\;}}}% 
+            \lccode`\~`\:\lowercase{\def~}{\discretionary{\hbox{\char`\:}}{\Wrappedafterbreak}{\hbox{\char`\:}}}% 
+            \lccode`\~`\?\lowercase{\def~}{\discretionary{\hbox{\char`\?}}{\Wrappedafterbreak}{\hbox{\char`\?}}}% 
+            \lccode`\~`\!\lowercase{\def~}{\discretionary{\hbox{\char`\!}}{\Wrappedafterbreak}{\hbox{\char`\!}}}% 
+            \lccode`\~`\/\lowercase{\def~}{\discretionary{\hbox{\char`\/}}{\Wrappedafterbreak}{\hbox{\char`\/}}}% 
+            \catcode`\.\active
+            \catcode`\,\active 
+            \catcode`\;\active
+            \catcode`\:\active
+            \catcode`\?\active
+            \catcode`\!\active
+            \catcode`\/\active 
+            \lccode`\~`\~ 	
+        }
+    \makeatother
+
+    \let\OriginalVerbatim=\Verbatim
+    \makeatletter
+    \renewcommand{\Verbatim}[1][1]{%
+        %\parskip\z@skip
+        \sbox\Wrappedcontinuationbox {\Wrappedcontinuationsymbol}%
+        \sbox\Wrappedvisiblespacebox {\FV@SetupFont\Wrappedvisiblespace}%
+        \def\FancyVerbFormatLine ##1{\hsize\linewidth
+            \vtop{\raggedright\hyphenpenalty\z@\exhyphenpenalty\z@
+                \doublehyphendemerits\z@\finalhyphendemerits\z@
+                \strut ##1\strut}%
+        }%
+        % If the linebreak is at a space, the latter will be displayed as visible
+        % space at end of first line, and a continuation symbol starts next line.
+        % Stretch/shrink are however usually zero for typewriter font.
+        \def\FV@Space {%
+            \nobreak\hskip\z@ plus\fontdimen3\font minus\fontdimen4\font
+            \discretionary{\copy\Wrappedvisiblespacebox}{\Wrappedafterbreak}
+            {\kern\fontdimen2\font}%
+        }%
+        
+        % Allow breaks at special characters using \PYG... macros.
+        \Wrappedbreaksatspecials
+        % Breaks at punctuation characters . , ; ? ! and / need catcode=\active 	
+        \OriginalVerbatim[#1,codes*=\Wrappedbreaksatpunct]%
+    }
+    \makeatother
+
+    % Exact colors from NB
+    \definecolor{incolor}{HTML}{303F9F}
+    \definecolor{outcolor}{HTML}{D84315}
+    \definecolor{cellborder}{HTML}{CFCFCF}
+    \definecolor{cellbackground}{HTML}{F7F7F7}
+    
+    % prompt
+    \makeatletter
+    \newcommand{\boxspacing}{\kern\kvtcb@left@rule\kern\kvtcb@boxsep}
+    \makeatother
+    \newcommand{\prompt}[4]{
+        {\ttfamily\llap{{\color{#2}[#3]:\hspace{3pt}#4}}\vspace{-\baselineskip}}
+    }
+    
+
+    
+    % Prevent overflowing lines due to hard-to-break entities
+    \sloppy 
+    % Setup hyperref package
+    \hypersetup{
+      breaklinks=true,  % so long urls are correctly broken across lines
+      colorlinks=true,
+      urlcolor=urlcolor,
+      linkcolor=linkcolor,
+      citecolor=citecolor,
+      }
+    % Slightly bigger margins than the latex defaults
+    
+    \geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+    
+    
+
+\begin{document}
+    
+    \maketitle
+    
+    
+
+    
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\begin{Verbatim}[commandchars=\\\{\}]
+<IPython.core.display.HTML object>
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \hypertarget{week-8---support-vector-machines}{%
+\section{Week 8 - Support Vector
+Machines}\label{week-8---support-vector-machines}}
+
+\textbf{Dr.~David Elliott}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \hyperref[intro]{Introduction}
+\item
+  \hyperref[hyperplane]{What is a Hyperplane?}
+\item
+  \hyperref[mmc]{Maximal Margin Classifier}
+\end{enumerate}
+
+    \textbf{Common Notation}
+
+\begin{itemize}
+\tightlist
+\item
+  \(X\) is a matrix containing all the feature values of all the
+  observations
+\item
+  \(n\) is the number of observations in the dataset
+\item
+  \(\mathbf{x}_i\) is a vector of all the feature values (except the
+  label) of the \(i\)th instance in the dataset.
+\item
+  \(y_i\) is the label (desired model output) of the \(i\)th instance in
+  the dataset.
+\item
+  \(p\) is the number of features in the dataset
+\item
+  \(\mathbf{x}_j\) is a vector of all the observations values of the
+  \(j\)th feature in the dataset.
+\end{itemize}
+
+    \hypertarget{introduction}{%
+\section{\texorpdfstring{1. Introduction
+}{1. Introduction }}\label{introduction}}
+
+The term Support Vector Machines (SVM's) is sometimes used loosely to
+refer to three methods, each an extension of the previous method\(^1\):
+
+\begin{itemize}
+\tightlist
+\item
+  Maximal margin classifier,
+\item
+  Support vector classifier,
+\item
+  Support vector machine.
+\end{itemize}
+
+SVM's are a common supervised discriminative algorithm, well suited to
+\emph{complex} small- to medium sized datasets\(^2\).
+
+They can be used for both \textbf{classification} and regression.
+
+    \hypertarget{dataset-example-iris}{%
+\subsection{\texorpdfstring{Dataset Example: Iris
+}{Dataset Example: Iris }}\label{dataset-example-iris}}
+
+To demonstrate SVM's I'll be using Fisher's (or Anderson's) Iris flowers
+dataset\(^3\).
+
+The dataset consists of 50 samples each from three species of Iris (Iris
+setosa, Iris virginica and Iris versicolor).
+
+    \textbf{Notes}
+
+\begin{itemize}
+\tightlist
+\item
+  \emph{``\ldots This data comes from a famous experiment on a series of
+  measurements of three species of iris flowers. R A Fisher, a
+  statistically minded thinker in the early twentieth centure used this
+  dataset in his 1936 paper The Use of multiple measurements in
+  taxonomic problems, published in the Annals of Eugenics.''}\(^9\)
+\end{itemize}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+\textbf{\underline{Figure 1: Iris Flowers}}
+    \end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{1_Maximal_Margin_Classifiers_files/1_Maximal_Margin_Classifiers_8_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    Five attributes were collected for the 150 records.
+
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+   sepal length (cm)  sepal width (cm)  petal length (cm)  petal width (cm)
+0                5.1               3.5                1.4               0.2
+1                4.9               3.0                1.4               0.2
+2                4.7               3.2                1.3               0.2
+3                4.6               3.1                1.5               0.2
+4                5.0               3.6                1.4               0.2
+    \end{Verbatim}
+
+    
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\begin{Verbatim}[commandchars=\\\{\}]
+\{0: 'Setosa', 1: 'Versicolor', 2: 'Virginica'\}
+\end{Verbatim}
+\end{tcolorbox}
+        
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\begin{Verbatim}[commandchars=\\\{\}]
+   Sepal length (cm)  Sepal width (cm)  Petal length (cm)  Petal width (cm)  \textbackslash{}
+0                5.1               3.5                1.4               0.2
+1                4.9               3.0                1.4               0.2
+2                4.7               3.2                1.3               0.2
+3                4.6               3.1                1.5               0.2
+4                5.0               3.6                1.4               0.2
+
+  Species
+0  Setosa
+1  Setosa
+2  Setosa
+3  Setosa
+4  Setosa
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \textbf{Notes}
+
+\begin{itemize}
+\tightlist
+\item
+  Species is the typical target for its use in classification
+\end{itemize}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+\textbf{\underline{Figure 2: Iris Attributes}}
+    \end{Verbatim}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{1_Maximal_Margin_Classifiers_files/1_Maximal_Margin_Classifiers_14_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{1_Maximal_Margin_Classifiers_files/1_Maximal_Margin_Classifiers_15_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{1_Maximal_Margin_Classifiers_files/1_Maximal_Margin_Classifiers_16_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{1_Maximal_Margin_Classifiers_files/1_Maximal_Margin_Classifiers_17_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \textbf{Notes}
+
+\begin{itemize}
+\tightlist
+\item
+  We could use any one of the decision boundries above to separate the
+  flower classes, but which one if the ``best''?
+\end{itemize}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{1_Maximal_Margin_Classifiers_files/1_Maximal_Margin_Classifiers_19_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \textbf{Notes}
+
+\begin{itemize}
+\tightlist
+\item
+  The middle thick line is a {hyperplane} and the dashed outer lines are
+  the edges of the {margin}.
+\item
+  The circled points are the class examples that fall on the margin.
+  These will later be termed \emph{support vectors}.
+\end{itemize}
+
+    \hypertarget{what-is-a-hyperplane}{%
+\section{\texorpdfstring{2. What is a Hyperplane?
+}{2. What is a Hyperplane? }}\label{what-is-a-hyperplane}}
+
+In \(p\)-dimensional space, a hyperplane is a flat affine subspace of
+dimension \(p-1\).
+
+\begin{itemize}
+\tightlist
+\item
+  \emph{Two-dimensions}: A flat one-dimensional line
+\item
+  \emph{Three-dimensions}: A two-dimensional subspace
+\item
+  \emph{p-dimensions}: A \(p-1\) dimensional subspace
+\end{itemize}
+
+    \textbf{Notes}
+
+\begin{itemize}
+\item
+  ``Affine'' just means \emph{``does not need to pass through the
+  origin''}
+\item
+  \emph{Two-dimensions}: Figures 5 \& 6
+\item
+  \emph{Three-dimensions}: Figure 7
+\item
+  \emph{p-dimensions}: \ldots you'll have to use your imagination
+\item
+  If you want to interact with the 3D plot use
+  \texttt{\%matplotlib\ notebook}
+\end{itemize}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{1_Maximal_Margin_Classifiers_files/1_Maximal_Margin_Classifiers_23_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    In more detail\(^1\):
+
+\emph{Two-dimensions}:
+\(\beta_0 + \beta_1\mathbf{x}_1 + \beta_2\mathbf{x}_2 = 0\)
+
+\emph{Three-dimensions}:
+\(\beta_0 + \beta_1\mathbf{x}_1 + \beta_2\mathbf{x}_2 + \beta_3\mathbf{x}_3 = 0\)
+
+\emph{P-dimensions}:
+\(\beta_0 + \beta_1\mathbf{x}_1 + \beta_2\mathbf{x}_2 + ... + \beta_p\mathbf{x}_p = 0\)
+
+    If \(x = (\mathbf{x}_1, ..., \mathbf{x}_p)\) satisfies above, then it is
+a point on the hyperplane.
+
+    If
+\(\beta_0 + \beta_1\mathbf{x}_1 + \beta_2\mathbf{x}_2 + ... + \beta_p\mathbf{x}_p > 0\),
+it lies on one side of the hyperplane,
+
+so if,
+\(\beta_0 + \beta_1\mathbf{x}_1 + \beta_2\mathbf{x}_2 + ... + \beta_p\mathbf{x}_p < 0\),
+its on the other side.
+
+    \textbf{Notes}
+
+\begin{itemize}
+\tightlist
+\item
+  In-other-words, \(p\)-dimensional space is dividided into two halves.
+\end{itemize}
+
+    \hypertarget{classifying-data}{%
+\subsubsection{Classifying data}\label{classifying-data}}
+
+We aim to classify an \(n \times p\) matrix of \(n\) observations in
+\(p\) dimensional space, with these observations falling into two
+classes \(y_1,...,y_n \in \{-1,1\}\).
+
+If we were to perfectly separate the classes the hyperplane would have
+the property that\(^1\):
+
+\(\beta_0 + \beta_1\mathbf{x}_{i1} + \beta_2\mathbf{x}_{i2} + ... + \beta_p\mathbf{x}_{ip} > 0 \quad \text{if} \ y_i = 1\),
+
+\(\beta_0 + \beta_1\mathbf{x}_{i1} + \beta_2\mathbf{x}_{i2} + ... + \beta_p\mathbf{x}_{ip} < 0 \quad \text{if} \ y_i = -1\).
+
+    For a new test observations \(x^*\), we would look at the sign of:
+
+\[f(x^*) = \beta_0 + \beta_1x_1^* + \beta_2x_2^* + ... + \beta_px_p^*.\]
+
+We would assign it to class 1 if \(f(x^*)\) is positive and class -1 if
+negative.
+
+Furthermore, we could use the magnitude of \(f(x^*)\) to indicate how
+far the point lies from the hyperplane.
+
+    \hypertarget{maximal-margin-classifier}{%
+\section{\texorpdfstring{3. Maximal Margin Classifier
+}{3. Maximal Margin Classifier }}\label{maximal-margin-classifier}}
+
+We need a reasonable way of constucting a hyperplane, out of the
+possible choices.
+
+Maximal margin hyperplanes look at getting the hyperplane that is the
+furthest from the training observations - we compute the perpendicular
+distance from each training observation to a given separating
+hyperplane.
+
+The maximal margin hyperplane is the separating hyperplane for which the
+margin is largest.
+
+We hope the classifier with a large margin on the training data will
+generalise well to unseen test observations.
+
+    Another way of defining our hyperplane is:
+
+\[\mathbf{w} \cdot \mathbf{x} + b = 0,\]
+
+which uses the dot product between a weight vector, \(\mathbf{w}\), and
+our input vector \(\mathbf{x}\), plus our bias, \(b\) (sometimes defined
+as \(w_0\)).
+
+In statistics the dot product of two n-dimensional vectors
+\(\mathbf{a}\) and \(\mathbf{b}\) is often noted as
+\(\mathbf{a} \cdot \mathbf{b}\). The dot product is a type of
+\emph{inner product}, often denoted as
+\(\left<\mathbf{a},\mathbf{b}\right>\).
+
+    \textbf{Notes}
+
+\begin{itemize}
+\tightlist
+\item
+  \(\mathbf{a} \cdot \mathbf{b} = \sum\limits^n_{i=1}\mathbf{a}_i\mathbf{b}_i\)
+\end{itemize}
+
+    In Machine Learning, vectors are typically represented as \emph{column
+vectors}, so the dot product is defined as
+\(\mathbf{a}^{\mathrm T} \mathbf{b}\). Using this notation, our
+hyperplane is\(^{10}\):
+
+\[\mathbf{w}^{\mathrm T}\mathbf{x} + b = 0.\]
+
+Our margins, where our labels \(y \in \{-1,1\}\), are then:
+
+\[
+\mathbf{w}^{\mathrm T}\mathbf{x}_i + b \geq 1 \text{ if } y_i = 1, \\
+\mathbf{w}^{\mathrm T}\mathbf{x}_i + b \leq -1 \text{ if } y_i = -1, \\
+\text{for } i = 1,\ldots,n,
+\]
+
+which can be more compactly written as: \[
+y_i\left(\mathbf{w}^{\mathrm T}\mathbf{x}_i + b\right) \geq 1 \quad \forall_i
+\]
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{1_Maximal_Margin_Classifiers_files/1_Maximal_Margin_Classifiers_34_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    There are two equidistant points from the maximal margin hyperplane,
+lying on the dashed lines. These observations are called \emph{Support
+Vectors}.
+
+We can call these two points, \(x_1\) and \(x_2\) as below:
+
+\[\mathbf{w}^{\mathrm T}x_1 + b = 1,\]
+
+\[\mathbf{w}^{\mathrm T}x_2 + b = -1.\]
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{1_Maximal_Margin_Classifiers_files/1_Maximal_Margin_Classifiers_36_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    If we move our support vectors our hyperplane will too.
+
+This is because the maximal margin hyperplane only depends on these
+support vectors.
+
+Other data points could be moved without the hyperplane moving.
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{1_Maximal_Margin_Classifiers_files/1_Maximal_Margin_Classifiers_38_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    We want to maximise the distance between the margin lines, on which the
+points lie\(^{10}\).
+
+\[x_1-x_2\]
+
+    \[
+\frac{\phantom{\quad}\mathbf{w}^{\mathrm T}x_1 + b = 1\\ - 
+\mathbf{w}^{\mathrm T}x_2 + b = -1 \\}{\\ \mathbf{w}^{\mathrm T}(x_1 - x_2) = 2}
+\]
+
+    We can normalise this equation by the length (Euclidean norm) of the
+vector \(\mathbf{w}\):
+
+\[
+||\mathbf{w}|| = \sqrt{\sum^p_{j=1}w^2_j}
+\]
+
+\[
+\frac{\mathbf{w}^{\mathrm T}(x_1 - x_2)}{||\mathbf{w}||} = \frac{2}{||\mathbf{w}||}
+\]
+
+    \textbf{Notes} 1. we want the distance between \(x_1\) and \(x_2\) 2.
+our \(b\) cancels out 3. we want to remove \(\mathbf{w}^{\mathrm T}\) 4.
+we do this with norm of \(\mathbf{w}^{\mathrm T}\). However we cannot
+remove \(||\mathbf{w}||\), so we are left to maximise
+\(\frac{2}{||\mathbf{w}||}\).
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{1_Maximal_Margin_Classifiers_files/1_Maximal_Margin_Classifiers_43_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    We want to \(\text{max}\frac{2}{||\mathbf{w}||}\), while classifying
+everything correctly,
+\(y_i(\mathbf{w}^{\mathrm T}\mathbf{x}_i+b) \geq 1 \quad \forall_i\).
+
+Or, instead:
+
+\({\text{min} \atop \mathbf{w}, b}\frac{1}{2}||\mathbf{w}||^2 \quad \text{s.t.} \quad y_i(\mathbf{w}^{\mathrm T}\mathbf{x}_i+b) \geq 1 \quad \forall_i\),
+
+which is easier because this is a \emph{convex quadratic optimisation
+problem} which is efficiently solvable using quadratic programming
+algorithms.
+
+    \textbf{Notes}
+
+\begin{itemize}
+\tightlist
+\item
+  \(\frac{1}{2}\) is added for convience.
+\end{itemize}
+
+    \hypertarget{primal-problem}{%
+\subsubsection{Primal Problem}\label{primal-problem}}
+
+This requires a \emph{Lagrangian} formulation of the problem so we
+introduce Lagrange multipliers, \(\alpha_i, i = 1, \ldots , n\):
+
+\[
+\min L_P = \frac{1}{2}||\mathbf{w}||^2 - \sum^n_{i=1} \alpha_iy_i(\mathbf{w}^{\mathrm T}\mathbf{x}_i+b) + \sum^n_{i=1} \alpha_i \qquad \text{s.t.} \quad \forall_i \alpha_i \geq 0
+\]
+
+    \hypertarget{duel-problem267}{%
+\subsubsection{\texorpdfstring{Duel
+Problem\(^{2,6,7}\)}{Duel Problem\^{}\{2,6,7\}}}\label{duel-problem267}}
+
+Removes the dependence on \(\mathbf{w}\) and \(b\),
+
+\[
+\max L_D = \sum_i^n\alpha_i - \frac{1}{2}\sum_i^n\sum_k^n\alpha_i\alpha_ky_iy_k\mathbf{x}_i^{\mathrm T} \mathbf{x}_k \qquad \text{s.t.} \quad \forall_i \alpha_i \geq 0.
+\]
+
+To achive this we first need to set a constaint,
+
+\[\sum^n_i\alpha_iy_i = 0.\]
+
+Now we can find the vector \(\hat\alpha\) that maximises the equasion
+using a \emph{QP solver}.
+
+    \textbf{Notes}
+
+\begin{itemize}
+\tightlist
+\item
+  The duel problem allows us later to use the kernel trick.
+\item
+  \(\sum_i\alpha_iy_i = 0\) removes our \(b\).
+\item
+  There is a Lagrange multiplier \(\alpha_i\) for every training point.
+  Points for which \(\alpha_i > 0\) are called ``support vectors'', and
+  lie on one of the margins, with all other training points having
+  \(\alpha_i = 0\).
+\item
+  \(\alpha_i\) will only be zero if all training points have the same
+  class.
+\end{itemize}
+
+    Knowing our \(\hat\alpha_i\) means we can find the weights,
+\(\mathbf{\hat w}\), which are a linear combination of the training
+inputs, \(\mathbf{x}_i\), training outputs, \(y_i\), and the values of
+\(\alpha\),
+
+\[\mathbf{\hat w} = \sum_{i \in s}\hat\alpha_iy_i\mathbf{x}_i,\]
+
+where \(s\) is the collection of indicies of support vectors\(^6\). We
+only need the support vectors as they are the only ones with
+\(\hat\alpha_i > 0\).
+
+Out bias term, \(\hat b\), is then determined by\(^2\): \[
+\hat b = \frac{1}{n_s}\sum^n_{i =1}\left(y_i-\mathbf{\hat w}^{\mathrm T}\mathbf{x}_i\right)
+\] where \(n_s\) is the number of support vectors.
+
+    \textbf{Notes}
+
+\begin{itemize}
+\tightlist
+\item
+  We only need to focus on those with \(\alpha_i > 0\).
+\item
+  Solving the SVM problem is equivalent to finding a solution to the
+  Karush-Kuhn-Tucker (KKT) conditions.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    it is through the use of using the following Karush-Kuhn-Tucker
+    (KKT) condition we can find \(b\): \[
+    \alpha_i(y_i(\mathbf{w} \cdot \mathbf{x}_i + b) - 1) = 0 \quad \forall i.
+    \]
+  \end{itemize}
+\item
+  It is numerically safer to take the average value over all support
+  vectors, \(\frac{1}{N_S}\).
+\item
+  For more reading on quadratic programming for support vector machines,
+  I recommend you read:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Appendix C in Géron, A. (2017). Hands-on machine learning with
+    Scikit-Learn and TensorFlow: concepts, tools, and techniques to
+    build intelligent systems. " O'Reilly Media, Inc.".
+  \item
+    Burges, C. J. (1998). A tutorial on support vector machines for
+    pattern recognition. Data mining and knowledge discovery, 2(2),
+    121-167.
+  \item
+    https://www.adeveloperdiary.com/data-science/machine-learning/support-vector-machines-for-beginners-duality-problem/
+  \end{itemize}
+\end{itemize}
+
+    \hypertarget{inner-products-similarity-and-svms8}{%
+\subsection{\texorpdfstring{Inner products, similarity, and
+SVMs\(^8\)}{Inner products, similarity, and SVMs\^{}8}}\label{inner-products-similarity-and-svms8}}
+
+\textbf{Question}: But why bother doing this? That was a lot of effort,
+why not just solve the original problem?
+
+\textbf{Answer}: Because this will let us solve the problem by computing
+the just the inner products (\(\mathbf{x}_i^{\mathrm T} \mathbf{x}_k\))
+which will be important when we want to solve non-linearly separable
+classification problems.
+
+\begin{itemize}
+\tightlist
+\item
+  Inner products provide a measure of \emph{``similarity''}
+\item
+  Inner product in 2D between 2 vectors of unit length returns the
+  cosine of the angle between them. In otherwords, how \emph{``far
+  apart''} they are.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    if they are parallel their inner product is 1 (completely similar).
+  \item
+    If they are perpendicular (completely unlike) their inner product is
+    0 (so should not contribute to the correct classifier).
+  \end{itemize}
+\end{itemize}
+
+    \[
+L_D(\alpha_i) = \sum_i^n\alpha_i - \frac{1}{2}\sum_{i,k}^n\alpha_i\alpha_ky_iy_k\mathbf{x}_i^{\mathrm T} \mathbf{x}_k \qquad \text{s.t.} \quad \forall_i \alpha_i \geq 0, \ \sum_i^n\alpha_iy_i = 0.
+\]
+
+\textbf{Case 1} Two observations \(\mathbf{x}_i\), \(\mathbf{x}_k\) are
+completely \emph{dissimilar} (orthogonal), so their dot product is 0.
+They don't contribute to \(L\).
+
+\textbf{Case 2} Two observations \(\mathbf{x}_i\), \(\mathbf{x}_k\) are
+similar and predict the \emph{same} output value \(y_i\) (ie. both
+\(+1\) or \(-1\)). This means \(y_i \times y_k = 1\) and the value
+\(\alpha_i\alpha_ky_iy_k\mathbf{x}_i\mathbf{x}_k\) is positive. However
+this \emph{decreases} the value of \(L\), due to subtracting from the
+first term sum, \(\sum_i^n\alpha_i\), so the algorithm downgrades
+similar feature vectors that make the \emph{same} prediction.
+
+\textbf{Case 3} : Two observations \(\mathbf{x}_i\), \(\mathbf{x}_k\)
+predict opposite predictions about the output value \(y_i\) (ie. one
+\(+1\) and the other \(-1\)), but are otherwise similar. The value
+\(\alpha_i\alpha_ky_iy_k\mathbf{x}_i\mathbf{x}_k\) is negative and since
+we are subtracting it, this adds to the sum. These are the examples that
+maximise the margin width.
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{1_Maximal_Margin_Classifiers_files/1_Maximal_Margin_Classifiers_53_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \hypertarget{recap1}{%
+\subsection{\texorpdfstring{Recap\(^1\)}{Recap\^{}1}}\label{recap1}}
+
+The solution to the maximal margin classifier problem involves only the
+\emph{inner products} of the observations:
+
+\[
+\left<x_i,x_{i^{\prime}}\right> = \sum^p_{j=1}x_{ij}x_{i^{\prime}j}.
+\]
+
+Assume we have a new point \(x^*\). If wanted to compute \(f(x^*)\)
+using our linear classifier we would need to the inner product between
+\(x^*\) and each training point \(x_i\):
+
+\[f(x) = \sum^n_{i=1}\hat\alpha_i\left<x^*,x_i\right>+ \hat b.\]
+
+In the above case, for estimating the parameters
+\(\hat\alpha_1...,\hat\alpha_n\) and \(\hat b\), we need the
+\(n(n-1)/2\) inner products \(\left<x_i,x_{i^\prime}\right>\) between
+all pairs of training observations.
+
+However, \(\hat\alpha\) is nonzero only for support vectors, so if we
+have a collection of their indicies, \(s\), we can do the following
+instead:
+
+\[
+f(x^*) = \sum_{i\in s}\hat\alpha_i \left<x^*,x_i\right> + \hat b.
+\]
+
+    \hypertarget{limitations}{%
+\subsection{Limitations}\label{limitations}}
+
+\begin{itemize}
+\tightlist
+\item
+  If we have a large number of features, this approach often leads to
+  overfitting.
+\item
+  Maximal Margin Classifiers are sensitive to outliers.
+\end{itemize}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{1_Maximal_Margin_Classifiers_files/1_Maximal_Margin_Classifiers_56_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \textbf{Notes}
+
+\begin{itemize}
+\tightlist
+\item
+  In figure 13 above, we can see that the reliance on a small number of
+  observations means there is now a small margin.
+\item
+  We want to be confident that a distance from the hyperplane is a
+  measure of our confidence in its classification, and that we have no
+  overfit to our training data.
+\end{itemize}
+
+    In other cases, no exact linear separating hyperplane exists. Therefore
+we may want to use a hyperplane that \emph{almost} separates the two
+classes, allowing some errors, using a \emph{soft margin} (Support
+Vector Classifier).
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{1_Maximal_Margin_Classifiers_files/1_Maximal_Margin_Classifiers_59_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \hypertarget{associated-exercises}{%
+\section{Associated Exercises}\label{associated-exercises}}
+
+Now might be a good time to try exercises 1-4.
+
+\hypertarget{references}{%
+\section{References}\label{references}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  James, G., Witten, D., Hastie, T., \& Tibshirani, R. (2013). An
+  introduction to statistical learning. New York: springer.
+\item
+  Géron, A. (2017). Hands-on machine learning with Scikit-Learn and
+  TensorFlow: concepts, tools, and techniques to build intelligent
+  systems. " O'Reilly Media, Inc.".
+\item
+  Fisher, R. A. (1936). The use of multiple measurements in taxonomic
+  problems. Annals of eugenics, 7(2), 179-188.
+\item
+  Murphy, K. P. (2012). Machine learning: a probabilistic perspective.
+  MIT press.
+\item
+  Burges, C. J. (1998). A tutorial on support vector machines for
+  pattern recognition. Data mining and knowledge discovery, 2(2),
+  121-167.
+\item
+  Fletcher, R. Practical Methods of Optimization. John Wiley and Sons,
+  Inc., 2nd edition, 1987
+\item
+  http://web.mit.edu/6.034/wwwbob/svm-notes-long-08.pdf
+\item
+  https://bookdown.org/koehlerj/qr\_book/introducing-the-iris-dataset.html
+\item
+  Raschka, Sebastian, and Vahid Mirjalili. ``Python Machine Learning:
+  Machine Learning and Deep Learning with Python.'' Scikit-Learn, and
+  TensorFlow. Second edition ed (2017).
+\end{enumerate}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+[NbConvertApp] Converting notebook 1\_Maximal\_Margin\_Classifiers.ipynb to webpdf
+    \end{Verbatim}
+
+
+    % Add a bibliography block to the postdoc
+    
+    
+    
+\end{document}

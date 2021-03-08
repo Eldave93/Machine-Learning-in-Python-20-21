@@ -1,0 +1,13 @@
+\BOOKMARK [1][-]{section.1}{Week 8 - Support Vector Machines}{}% 1
+\BOOKMARK [1][-]{section.2}{1. Introduction }{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Dataset Example: Iris }{section.2}% 3
+\BOOKMARK [1][-]{section.3}{2. What is a Hyperplane? }{}% 4
+\BOOKMARK [2][-]{subsubsection.3.0.1}{Classifying data}{section.3}% 5
+\BOOKMARK [1][-]{section.4}{3. Maximal Margin Classifier }{}% 6
+\BOOKMARK [2][-]{subsubsection.4.0.1}{Primal Problem}{section.4}% 7
+\BOOKMARK [3][-]{subsubsection.4.0.2}{Duel Problem\136\1732,6,7\175}{subsubsection.4.0.1}% 8
+\BOOKMARK [2][-]{subsection.4.1}{Inner products, similarity, and SVMs\1368}{section.4}% 9
+\BOOKMARK [2][-]{subsection.4.2}{Recap\1361}{section.4}% 10
+\BOOKMARK [2][-]{subsection.4.3}{Limitations}{section.4}% 11
+\BOOKMARK [1][-]{section.5}{Associated Exercises}{}% 12
+\BOOKMARK [1][-]{section.6}{References}{}% 13
