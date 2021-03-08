@@ -8,8 +8,8 @@ If you want to view the Notes **online**, you can just follow the links below:
 __SVM__
 
 1. Maximal Margin Classifiers [<a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21//Week_08_SVM/1_Maximal_Margin_Classifiers.html" title="HTML">HTML</a>, <a href="https://github.com/Eldave93/Machine-Learning-in-Python-20-21/blob/master/Week_08_SVM/1_Maximal_Margin_Classifiers_no_code.pdf" title="PDF">PDF</a>]
-2. <a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21//Week_08_SVM/2_Support_Vector_Machines.html" title="Support Vector Machines">Support Vector Machines</a>
-3. <a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21//Week_08_SVM/3_Applications.html" title="Applications">Applications</a>
+2. Support Vector Machines [<a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21//Week_08_SVM/2_Support_Vector_Machines.html" title="HTML">HTML</a>, <a href="https://github.com/Eldave93/Machine-Learning-in-Python-20-21/blob/master/Week_08_SVM/2_Support_Vector_Machines_no_code.pdf" title="PDF">PDF</a>]
+3. Applications [<a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21//Week_08_SVM/3_Applications.html" title="HTML">HTML</a>, <a href="https://github.com/Eldave93/Machine-Learning-in-Python-20-21/blob/master/Week_08_SVM/3_Applications_no_code.pdf" title="PDF">PDF</a>]
 
 __Trees__
 
@@ -30,12 +30,10 @@ If you want to download and view them **offline**, you can right click on the li
 - Code can be viewed or hidden using the "Toggle Code" button at the top of the notebook.
 
 ### PDF
-- They do not display code.
+- They do not display code (for ease of reading more than a requirement).
 - They are useful for adding your own notes to.
-- .pdf conversions can have some issues:
-	- Numbering titles.
-	- Doesn't display tables as well as the html version.
-	- Some issues with \begin{align} in markdown math.
+- The best method I've found so far is to manually use https://pdfcrowd.com/ for converting the .html files.
+	- They have a Python API... but it costs money so I do it manually.
 
 ## Viewing Exercises
 
@@ -80,11 +78,7 @@ For each week, there are also subfolders for "Images" and saved "Models".
 
 As well as the weekly folders, there are folders for the "Data" used in the lectures and an "Extra" folder, containing additional material (most are currently unfinished).
 
-## Additional Notes
+## Known Issues
 
-- .html was chosen over .pdf as I found .pdf conversions had a number of errors:
-	- Has an issue with numbering titles.
-	- Doesn't display tables as well as the html version.
-	- Cannot use \begin{align} in markdown math.
 - .slides.html has an issue with figures not being displayed properly.
 	- Its better to run using "Rise" slideshow in Jupyter.
