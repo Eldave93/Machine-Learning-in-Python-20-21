@@ -34,7 +34,7 @@ If you want to download and view them **offline**, you can right click on the li
 
 ### PDF
 - Notes do not display code for ease of reading.
-- `PDF1` have just the questions, and `PDF2` are the questions and answers.
+- For the exercises, `PDF1` are just the questions, and `PDF2` are the questions and answers.
 - They are useful for adding your own notes to.
 - The best method I've found so far is to manually use https://pdfcrowd.com/ for converting the .html files.
 	- They have a Python API... but it costs money so I do it manually.
