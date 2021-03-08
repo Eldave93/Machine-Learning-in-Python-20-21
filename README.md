@@ -27,6 +27,10 @@ If you want to download and view them **offline**, you can right click on the li
 
 - Code can be viewed or hidden using the "Toggle Code" button at the top of the notebook.
 
+### PDF's
+You can also view/download the pdfs (without code) by following the links below:
+- <a href="https://github.com/Eldave93/Machine-Learning-in-Python-20-21/blob/master/Week_08_SVM/1_Maximal_Margin_Classifiers.pdf" title="Maximal Margin Classifiers">Maximal Margin Classifiers</a>
+
 ## Viewing Exercises
 
 If you want to view the Exercises **online**, you can just follow the links below:
