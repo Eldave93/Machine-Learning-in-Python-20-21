@@ -6,8 +6,11 @@
 JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
 1615219710130	Marionette	INFO	Listening on port 55657
 1615219710266	Marionette	WARN	TLS certificate errors will be ignored for this session
-1615219739070	geckodriver	INFO	Listening on 127.0.0.1:55690
-1615219742109	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\delliot2\\AppData\\Local\\Temp\\rust_mozprofileaUvdO7"
+1615221393757	Marionette	INFO	Stopped listening on port 55657
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+"--marionette" "-headless" "-foreground" "-no-remote" "-profile" "C:\\Users\\delliot2\\AppData\\Local\\Temp\\rust_mozprofileaUvdO7"
 *** You are running in headless mode.
 JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
 1615219743724	Marionette	INFO	Listening on port 55701
