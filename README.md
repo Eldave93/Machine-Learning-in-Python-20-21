@@ -7,7 +7,7 @@ If you want to view the Notes **online**, you can just follow the links below:
 
 __SVM__
 
-1. <a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21//Week_08_SVM/1_Maximal_Margin_Classifiers.html" title="Maximal Margin Classifiers">Maximal Margin Classifiers</a>
+1. Maximal Margin Classifiers [<a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21//Week_08_SVM/1_Maximal_Margin_Classifiers.html" title="HTML">HTML</a>, <a href="https://github.com/Eldave93/Machine-Learning-in-Python-20-21/blob/master/Week_08_SVM/1_Maximal_Margin_Classifiers.pdf" title="PDF">PDF</a>]
 2. <a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21//Week_08_SVM/2_Support_Vector_Machines.html" title="Support Vector Machines">Support Vector Machines</a>
 3. <a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21//Week_08_SVM/3_Applications.html" title="Applications">Applications</a>
 
@@ -26,10 +26,6 @@ __Ethics__
 If you want to download and view them **offline**, you can right click on the links above, and click "save link as". These are .html files that you can open using any web browser (I use chrome).
 
 - Code can be viewed or hidden using the "Toggle Code" button at the top of the notebook.
-
-### PDF's
-You can also view/download the pdfs (without code) by following the links below:
-- <a href="https://github.com/Eldave93/Machine-Learning-in-Python-20-21/blob/master/Week_08_SVM/1_Maximal_Margin_Classifiers.pdf" title="Maximal Margin Classifiers">Maximal Margin Classifiers</a>
 
 ## Viewing Exercises
 
