@@ -67,9 +67,10 @@ You can also access the material directly though GitHub. In each of the weekly c
 
 - .ipynb: The Juypter Notebook used to create the slides and notes.
 - .html: The html version of the notes and exercises.
+- .pdf: A pdf version of the notes and exercises.
 - .slides.html: A html version of the slides.
 
-For each week, there are also subfolders for "Images" and saved "Models".
+For each week, there are also subfolders for "Images", saved "Models", and "PDF_Prep" (files used to prepare pdfs).
 
 As well as the weekly folders, there are folders for the "Data" used in the lectures and an "Extra" folder, containing additional material (most are currently unfinished).
 
