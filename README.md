@@ -15,15 +15,21 @@ Exercises [<a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21/
 
 __Trees__
 
-- Work in Progress
+1. Decision Trees [Work in Progress]
+2. Ensemble Averaging [Work in Progress]
+
+Exercises [<a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21//Week_09_Trees/Trees_Exercises.html" title="HTML">HTML</a>]
 
 __Clustering__
 
-- Work in Progress
+1. K-Means [Work in Progress]
+2. Hierarchical Clustering [Work in Progress]
+
+Exercises [Work in Progress]
 
 __Ethics__
 
-- Work in Progress
+1. Big Data, Black Boxes, and Bias [Work in Progress]
 
 If you want to download and view them **offline**, you can right click on the links above, and click "save link as". 
 
