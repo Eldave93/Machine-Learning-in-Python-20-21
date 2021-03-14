@@ -15,8 +15,9 @@ Exercises [<a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21/
 
 __Trees__
 
-1. Decision Trees [Work in Progress]
-2. Ensemble Averaging [Work in Progress]
+1. Decision Trees [<a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21//Week_08_SVM/1_Decision_Trees.html" title="HTML">HTML</a>, <a href="https://github.com/Eldave93/Machine-Learning-in-Python-20-21/blob/master/Week_08_SVM/1_Decision_Trees.pdf" title="PDF">PDF</a>]
+2. Ensemble Averaging [<a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21//Week_08_SVM/2_Ensemble_Averaging.html" title="HTML">HTML</a>, <a href="https://github.com/Eldave93/Machine-Learning-in-Python-20-21/blob/master/Week_08_SVM/2_Ensemble_Averaging.pdf" title="PDF">PDF</a>]
+3. Applications [<a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21//Week_08_SVM/3_Applications.html" title="HTML">HTML</a>, <a href="https://github.com/Eldave93/Machine-Learning-in-Python-20-21/blob/master/Week_08_SVM/3_Applications.pdf" title="PDF">PDF</a>]
 
 Exercises [<a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21//Week_09_Trees/Trees_Exercises.html" title="HTML">HTML</a>]
 
