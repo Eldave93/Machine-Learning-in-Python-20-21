@@ -26,7 +26,7 @@ __Clustering__
 1. K-Means [Work in Progress]
 2. Hierarchical Clustering [Work in Progress]
 
-Exercises [Work in Progress]
+Exercises [<a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21/Week_10_Clustering/Clustering_Exercises.html" title="HTML">HTML</a>]
 
 __Ethics__
 
