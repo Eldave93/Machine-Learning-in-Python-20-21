@@ -19,7 +19,7 @@ __Trees__
 2. Ensemble Averaging [<a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21/Week_09_Trees/2_Ensemble_Averaging.html" title="HTML">HTML</a>, <a href="https://github.com/Eldave93/Machine-Learning-in-Python-20-21/blob/master/Week_09_Trees/2_Ensemble_Averaging.pdf" title="PDF">PDF</a>]
 3. Applications [<a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21/Week_09_Trees/3_Applications.html" title="HTML">HTML</a>, <a href="https://github.com/Eldave93/Machine-Learning-in-Python-20-21/blob/master/Week_09_Trees/3_Applications.pdf" title="PDF">PDF</a>]
 
-Exercises [<a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21/Week_09_Trees/Trees_Exercises.html" title="HTML">HTML</a>]
+Exercises [<a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21/Week_09_Trees/Trees_Exercises.html" title="HTML">HTML</a>, <a href="https://github.com/Eldave93/Machine-Learning-in-Python-20-21/blob/master/Week_09_Trees/Trees_Exercises.pdf" title="PDF1">PDF1</a>, <a href="https://github.com/Eldave93/Machine-Learning-in-Python-20-21/blob/master/Week_09_Trees/Trees_Exercises_Answers.pdf" title="PDF2">PDF2</a>]
 
 __Clustering__
 
