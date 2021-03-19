@@ -23,8 +23,9 @@ Exercises [<a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21/
 
 __Clustering__
 
-1. K-Means [Work in Progress]
+1. K-Means [<a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21/Week_10_Clustering/1_K_Means.html" title="HTML">HTML</a>, <a href="https://github.com/Eldave93/Machine-Learning-in-Python-20-21/blob/master/Week_10_Clustering/1_K_Means.pdf" title="PDF">PDF</a>]
 2. Hierarchical Clustering [Work in Progress]
+3. Applications [Work in Progress]
 
 Exercises [<a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21/Week_10_Clustering/Clustering_Exercises.html" title="HTML">HTML</a>]
 
