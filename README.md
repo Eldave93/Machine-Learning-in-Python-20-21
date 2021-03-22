@@ -24,8 +24,8 @@ Exercises [<a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21/
 __Clustering__
 
 1. K-Means [<a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21/Week_10_Clustering/1_K_Means.html" title="HTML">HTML</a>, <a href="https://github.com/Eldave93/Machine-Learning-in-Python-20-21/blob/master/Week_10_Clustering/1_K_Means.pdf" title="PDF">PDF</a>]
-2. Hierarchical and Density Clustering [Work in Progress]
-3. Applications [Work in Progress]
+2. Hierarchical and Density Clustering [<a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21/Week_10_Clustering/2_Hierarchical_and_Density_Clustering.html" title="HTML">HTML</a>, <a href="https://github.com/Eldave93/Machine-Learning-in-Python-20-21/blob/master/Week_10_Clustering/2_Hierarchical_and_Density_Clustering.pdf" title="PDF">PDF</a>]
+3. Applications [<a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21/Week_10_Clustering/3_Applications.html" title="HTML">HTML</a>, <a href="https://github.com/Eldave93/Machine-Learning-in-Python-20-21/blob/master/Week_10_Clustering/3_Applications.pdf" title="PDF">PDF</a>]
 
 Exercises [<a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21/Week_10_Clustering/Clustering_Exercises.html" title="HTML">HTML</a>]
 
