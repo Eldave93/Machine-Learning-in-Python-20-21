@@ -31,7 +31,7 @@ Exercises [<a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21/
 
 __Ethics__
 
-1. Big Data, Black Boxes, and Bias [Work in Progress]
+1. Big Data, Black Boxes, and Bias [<a href="https://Eldave93.github.io/Machine-Learning-in-Python-20-21/Week_11_Data_Science_Ethics/1_Big_Data_Black_Boxes_and_Bias.html" title="HTML">HTML</a>, <a href="https://github.com/Eldave93/Machine-Learning-in-Python-20-21/blob/master/Week_11_Data_Science_Ethics/1_Big_Data_Black_Boxes_and_Bias.pdf" title="PDF">PDF</a>]
 
 If you want to download and view them **offline**, you can right click on the links above, and click "save link as". 
 
