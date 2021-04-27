@@ -13548,7 +13548,7 @@ As Entropy favors the _larger_ value (maximizes information gain) so favours spl
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <details><summary>Click here for answer</summary>
-You could verify, by comparing the possible splits, that the chosen split would be A, B in one child node, and A, A, A in another. This means the Gini impurity in the parent node, $1-\left(\frac{1}{5}\right)^2-\left(\frac{4}{5}\right) = 0.32$, is lower than the impurity in the first child node, $1-\left(\frac{1}{2}\right)^2-\left(\frac{1}{2}\right) = 0.5$. However as the other node is pure ($0$), the overall weighted Gini is lower, $\frac{2}{5} \times 0.5 + \frac{3}{5} \times 0 = 0.2$. 
+You could verify, by comparing the possible splits, that the chosen split would be A, B in one child node, and A, A, A in another. This means the Gini impurity in the parent node, $1-\left(\frac{1}{5}\right)^2-\left(\frac{4}{5}\right)^2 = 0.32$, is lower than the impurity in the first child node, $1-\left(\frac{1}{2}\right)^2-\left(\frac{1}{2}\right)^2 = 0.5$. However as the other node is pure ($0$), the overall weighted Gini is lower, $\frac{2}{5} \times 0.5 + \frac{3}{5} \times 0 = 0.2$. 
 </details>
 </div>
 </div>
@@ -13722,7 +13722,7 @@ For random forests, a random subset of features are compared for splitting each 
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>[NbConvertApp] Converting notebook Trees_Exercises.ipynb to html
-[NbConvertApp] Writing 498103 bytes to PDF_Prep\Trees_Exercises_Answers.html
+[NbConvertApp] Writing 498033 bytes to Trees_Exercises.html
 </pre>
 </div>
 </div>
